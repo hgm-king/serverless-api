@@ -12,7 +12,7 @@ variable "ecs_name" {
 variable "repository_name" {
   description = "Value of the Name tag for the Auth ECR Repository"
   type        = string
-  default     = "CodeRepository"
+  default     = "code_repository"
 }
 
 variable "cidr_vpc" {

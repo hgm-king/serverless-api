@@ -7,8 +7,6 @@ COPY ./src ./src
 
 FROM node:16-alpine
 WORKDIR /usr/src/app
-COPY package.json ./
-COPY .babelrc ./
-RUN npm install
 COPY --from=appbuild /usr/src/app ./
+COPY ./.env ./.env
 CMD npm start

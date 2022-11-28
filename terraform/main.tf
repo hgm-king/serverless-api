@@ -235,12 +235,12 @@ resource "aws_ecs_service" "ecs_service" {
 }
 
 resource "aws_api_gateway_rest_api" "api_gateway" {
-  name = "OstrichApi"
+  name = "Api"
 }
 
 resource "aws_api_gateway_resource" "resource" {
   parent_id   = aws_api_gateway_rest_api.api_gateway.root_resource_id
-  path_part   = "auth"
+  path_part   = "api"
   rest_api_id = aws_api_gateway_rest_api.api_gateway.id
 }
 
