@@ -2,7 +2,7 @@
 
 #### A simple serverless API, running in ECS that is accessed through API Gateway
 
-The API is a simple `hello_world` in nodeJS. The docerkized code resides in an ECR that deploys to and ECS service. API Gateway points 
+The API is a simple `hello_world` in nodeJS. API Gateway passes requests through to a Load Balancer. This Load Balancer automatically manages a pool of ECS tasks that service the requests. The dockerized code resides in an ECR repo which the tasks pull from.
 
 ## Quickstart
 1. Pull down project
@@ -19,3 +19,5 @@ The API is a simple `hello_world` in nodeJS. The docerkized code resides in an E
 - To redeploy the code, you must push to the ECR repo. Then you must stop the required ECS task in the console. The next task will spin up automatically with the newest version.
 
 - To update API Gateway info, you need to use the API Gateway console to redeploy the staged API config.
+
+- ECS is not necessarily cheap so make sure not to use too many resources!
