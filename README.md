@@ -13,7 +13,7 @@ The API is a simple `hello_world` in nodeJS. The docerkized code resides in an E
 1. Find API Gateway and deploy the staged API
 1. Use the API URL to curl `/hello` (mine looks like `curl https://igxotx43h1.execute-api.us-east-2.amazonaws.com/v1/api/hello`)
 
-![Arch Diagram](./resources/s3-lambda-pipeline.png)
+![Arch Diagram](./resources/serverless-api.png)
 
 ## Notes
 - To redeploy the code, you must push to the ECR repo. Then you must stop the required ECS task in the console. The next task will spin up automatically with the newest version.
